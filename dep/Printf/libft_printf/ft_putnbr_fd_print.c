@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_printf.h"
 
 int	ft_ifneg(int n)
 {
@@ -52,7 +52,7 @@ int	lenint(int n)
 	return (i);
 }
 
-int	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd_print(int n, int fd)
 {
 	int	ret;
 
@@ -62,18 +62,18 @@ int	ft_putnbr_fd(int n, int fd)
 	if (n < 0)
 	{
 		n = n * -1;
-		if (ft_putchar_fd('-', fd) < 0)
+		if (ft_putchar_fd_print('-', fd) < 0)
 			return (-1);
 	}
 	if (n >= 10)
 	{
-		if (ft_putnbr_fd(n / 10, fd) < 0)
+		if (ft_putnbr_fd_print(n / 10, fd) < 0)
 			return (-1);
 		n = n % 10;
 	}
 	if (n < 10)
 	{
-		if ((ft_putchar_fd(n + 48, fd)) < 0)
+		if ((ft_putchar_fd_print(n + 48, fd)) < 0)
 			return (-1);
 	}
 	return (ret);

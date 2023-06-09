@@ -21,7 +21,7 @@ int	ft_printf(const char *str, ...)
 	i = 0;
 	ret = 0;
 	va_start(arg, str);
-	while (i < ft_strlen((char *)str))
+	while (i < ft_strlen_print((char *)str))
 	{
 		if (str[i] == '%')
 		{
@@ -31,7 +31,7 @@ int	ft_printf(const char *str, ...)
 		}
 		else
 		{
-			ret += ft_putchar_fd(str[i], 1);
+			ret += ft_putchar_fd_print(str[i], 1);
 			if (ret < 0)
 				return (-1);
 		}

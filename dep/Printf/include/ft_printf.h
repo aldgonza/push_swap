@@ -15,7 +15,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <limits.h>
-# include "../Libft/libft.h"
+# include "../libft_printf/libft_printf.h"
 
 int		ft_printf(const char *str, ...);
 int		ft_print_p(unsigned long long num);

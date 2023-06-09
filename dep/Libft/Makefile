@@ -58,7 +58,7 @@ BSSRCS	= ls_handle/ft_lstnew_bonus.c \
 		ls_handle/ft_lstmap_bonus.c \
 
 CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -g
 OBJS	= ${SRCS:%.c=%.o}
 BSOBJS	= ${BSSRCS:%.c=%.o}
 

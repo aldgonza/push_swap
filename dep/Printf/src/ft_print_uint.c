@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Libft/libft.h"
+#include "../include/ft_printf.h"
 
 int	ft_positive(unsigned int n)
 {
@@ -19,14 +19,14 @@ int	ft_positive(unsigned int n)
 	ret = 0;
 	if (n >= 10)
 	{
-		ret += ft_putnbr_fd(n / 10, 1);
+		ret += ft_putnbr_fd_print(n / 10, 1);
 		if (ret < 0)
 			return (-1);
 		n = n % 10;
 	}
 	if (n < 10)
 	{
-		ret += ft_putchar_fd(n + 48, 1);
+		ret += ft_putchar_fd_print(n + 48, 1);
 		if (ret < 0)
 			return (-1);
 	}

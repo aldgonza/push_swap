@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldgonza <aldgonza@student.42barcel>       +#+  +:+       +#+        */
+/*   By: aldgonza <aldgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 13:39:29 by aldgonza          #+#    #+#             */
-/*   Updated: 2022/07/18 17:10:29 by aldgonza         ###   ########.fr       */
+/*   Created: 2023/04/17 17:23:14 by aldgonza          #+#    #+#             */
+/*   Updated: 2023/06/07 18:30:05 by aldgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	ft_putchar_fd(int c, int fd)
-{
-	if ((write(fd, &c, 1)) != 1)
-		return (-1);
-	return (1);
-}
+# include "../dep/Libft/header/libft.h"
+# include "../dep/Printf/include/ft_printf.h"
+# include <unistd.h>
+# include <signal.h>
+
+
+int	ft_push_swap(char **input);
+
+#endif

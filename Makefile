@@ -10,15 +10,17 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= template.out
+NAME	= push_swap
 
-HEADER	= include/template.h
+HEADER	= include/push_swap.h
 
 CC		= gcc
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -g -Wall -Wextra -Werror
 
-SRCS	= \
+SRCS	= src/main.c \
+		src/push_swap.c \
+		\
 		
 DEP		= dep/Libft/libft.a \
 		dep/Printf/libftprintf.a \

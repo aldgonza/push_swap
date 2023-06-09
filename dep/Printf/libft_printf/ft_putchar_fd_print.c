@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldgonza <aldgonza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 14:28:04 by aldgonza          #+#    #+#             */
-/*   Updated: 2022/07/09 15:23:26 by aldgonza         ###   ########.fr       */
+/*   Created: 2022/05/30 13:39:29 by aldgonza          #+#    #+#             */
+/*   Updated: 2022/07/18 17:10:29 by aldgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_printf.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putchar_fd_print(int c, int fd)
 {
-	size_t	i;
-	int		ret;
-
-	i = 0;
-	ret = 0;
-	if (!s)
-	{
-		i += ft_putstr_fd("(null)", 1);
-		return ((int) i);
-	}
-	while (s[i])
-	{
-		ret += ft_putchar_fd(s[i], fd);
-		if (ret < 0)
-			return (-1);
-		i++;
-	}
-	return ((int)i);
+	if ((write(fd, &c, 1)) != 1)
+		return (-1);
+	return (1);
 }

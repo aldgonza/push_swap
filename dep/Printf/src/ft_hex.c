@@ -39,13 +39,13 @@ int	ft_hex(unsigned long long num, char key)
 	{
 		if (num <= 9)
 		{
-			ft_putchar_fd(num + '0', 1);
+			ft_putchar_fd_print(num + '0', 1);
 			if (ret < 0)
 				return (-1);
 		}
 		else
 		{
-			ft_putchar_fd(((int)(num - 10 + key)), 1);
+			ft_putchar_fd_print(((int)(num - 10 + key)), 1);
 			if (ret < 0)
 				return (-1);
 		}
