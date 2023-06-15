@@ -6,7 +6,7 @@
 /*   By: aldgonza <aldgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 21:31:52 by aldgonza          #+#    #+#             */
-/*   Updated: 2023/06/15 20:26:14 by aldgonza         ###   ########.fr       */
+/*   Updated: 2023/06/15 20:51:42 by aldgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(int argc, char **argv)
 		//////ASSHAT!!!!
 		if (!ft_dig_check(ptr))
 		{
-			ft_printf("Arg is wrong dude. nice try\nError(-2).\n");
+			ft_printf("Arg is wrong dude, nice try.\nError(-2).\n");
 			return (-2);
 		}
 		if (ft_push_swap(ptr) != 1)
@@ -71,6 +71,11 @@ int	main(int argc, char **argv)
 		}	
 		ft_printf("argc == 2\n");
 	}
+	else if (!ft_dig_check(argv + 1))
+		{
+			ft_printf("Arg is wrong dude, nice try.\nError(-2).\n");
+			return (-2);
+		}
 	else if (ft_push_swap(argv + 1) != 1)
 	{
 		ft_printf("Push_swap failure.\nError(-2).\n");
