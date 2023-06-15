@@ -82,7 +82,7 @@ char	*ft_itoa(int n)
 		return (ret);
 	}
 	len = lenint(n);
-	ret = malloc(len + 1 * sizeof(char));
+	ret = malloc((unsigned long)len + 1 * sizeof(char));
 	if (!ret)
 		return (NULL);
 	ret[len] = '\0';

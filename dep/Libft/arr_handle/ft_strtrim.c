@@ -14,11 +14,11 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	end;
+	int	start;
+	int	end;
 	char	*newstr;
 
-	end = ft_strlen(s1) - 1;
+	end = (int)ft_strlen(s1) - 1;
 	start = 0;
 	if (s1[0] == (char) NULL)
 	{
@@ -33,6 +33,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_strchr(set, s1[end]))
 		end--;
 	end = end - start + 1;
-	newstr = ft_substr(s1, start, end);
+	newstr = ft_substr(s1, (unsigned int)start, (size_t)end);
 	return (newstr);
 }

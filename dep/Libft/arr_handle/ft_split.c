@@ -53,7 +53,7 @@ char	**fill_ptr(char const *src, char **dest, char c, size_t wcount)
 		j = i;
 		while (src[j] != c && src[j] != '\0')
 			j++;
-		dest[ptpos] = (char *)ft_substr(src, i, j - i);
+		dest[ptpos] = (char *)ft_substr(src, (unsigned int)i, j - i);
 		if (!dest[ptpos])
 		{
 			freeall(dest, ptpos);

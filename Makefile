@@ -16,7 +16,7 @@ HEADER	= include/push_swap.h
 
 CC		= gcc
 
-CFLAGS	= -g -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -g
 
 SRCS	= src/main.c \
 		src/push_swap.c \
@@ -43,6 +43,7 @@ all: $(NAME)
 
 $(DEP):
 	@make -C dep/Libft
+	@make bonus -C dep/Libft
 	@make -C dep/Printf
 	
 clean:
