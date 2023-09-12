@@ -6,7 +6,7 @@
 /*   By: aldgonza <aldgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 16:37:35 by aldgonza          #+#    #+#             */
-/*   Updated: 2023/06/15 18:00:43 by aldgonza         ###   ########.fr       */
+/*   Updated: 2023/08/16 16:05:40 by aldgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_list	*ft_stack(char **input)
 	stack = ft_lstnew(input[i]);
 	if (!stack)
 		return (NULL);
+	stack->index = i;
 	i++;
 	while (input[i])
 	{

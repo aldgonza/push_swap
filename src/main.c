@@ -6,13 +6,13 @@
 /*   By: aldgonza <aldgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 21:31:52 by aldgonza          #+#    #+#             */
-/*   Updated: 2023/06/15 20:51:42 by aldgonza         ###   ########.fr       */
+/*   Updated: 2023/09/12 15:56:24 by aldgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_dig_check(char **ptr)
+int	  ft_dig_check(char **ptr)
 {
 	int	i;
 	int	j;
