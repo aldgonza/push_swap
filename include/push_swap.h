@@ -20,5 +20,8 @@
 
 
 int	ft_push_swap(char **input);
+int	ft_stack_vis(t_list	*stack_a, t_list *stack_b);
+t_list	*ft_sa(t_list *stack);
+t_list	*ft_sb(t_list *stack);
 
 #endif

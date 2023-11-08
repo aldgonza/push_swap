@@ -20,6 +20,8 @@ CFLAGS	= -Wall -Wextra -Werror -g
 
 SRCS	= src/main.c \
 		src/push_swap.c \
+		src/stack_vis.c \
+		src/moves.c \
 		\
 		
 DEP		= dep/Libft/libft.a \
